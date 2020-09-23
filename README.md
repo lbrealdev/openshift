@@ -25,6 +25,11 @@ Get MachineSet
 oc get machineset -n openshift-machine-api
 ```
 
+Get MachineConfigPool
+```
+oc get mcp
+```
+
 Get ClusterOperator
 ```
 oc get co
