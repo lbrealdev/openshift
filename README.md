@@ -6,6 +6,15 @@ This document contains knowledge of OpenShift Container Platform for daily use.
 
 ### Commands
 
+Get pods
+```
+oc get po
+
+oc get po -A
+
+oc get po -A -o wide
+```
+
 Get Machines
 ```
 oc get machines -n openshift-machine-api
