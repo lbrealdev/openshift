@@ -22,6 +22,10 @@ watch 'oc get po -A'
 watch 'oc get no'
 ```
 
+Get events
+```
+oc get events -A
+```
 
 Get Machines
 ```
