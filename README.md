@@ -15,6 +15,14 @@ oc get po -A
 oc get po -A -o wide
 ```
 
+Watch
+```
+watch 'oc get po -A'
+
+watch 'oc get no'
+```
+
+
 Get Machines
 ```
 oc get machines -n openshift-machine-api
