@@ -27,6 +27,28 @@ Get events
 oc get events -A
 ```
 
+Get serviceaccounts
+```
+oc get sa -A
+```
+
+Get storageclass
+```
+oc get sc
+```
+
+Get pv
+```
+oc get pv
+```
+
+Get pvc
+```
+oc get pvc
+
+oc get pvc -A
+```
+
 Get Machines
 ```
 oc get machines -n openshift-machine-api
