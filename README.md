@@ -92,3 +92,20 @@ oc wait mcp/master --for condition=updated
 
 oc wait mcp/worket --for condition=updated
 ```
+
+Get clusterversion
+```
+oc get clusterversion
+```
+Describe clusterversion
+```
+oc describe clusterversion/version
+```
+Get oauth
+```
+oc get oauth
+```
+Describe oauth
+```
+oc describe oauth/cluster
+```
