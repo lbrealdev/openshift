@@ -3,6 +3,7 @@
 This document contains knowledge of OpenShift Container Platform for daily use.
 
 <!-- TOC -->
+
 - [Infrastructure]
     - [Infrastructure](#infrastructure)
     - [DNS](#dns)
