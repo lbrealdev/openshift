@@ -9,3 +9,10 @@ Check Cluster API Address:
 ```
 curl -kv $(oc whoami --show-server)/healthz
 ```
+
+Get and check console URL:
+```
+oc get console cluster -o yaml | awk '/URL/ {print $2}'
+
+curl -kv $(oc get console cluster -o yaml | awk '/URL/ {print $2}')
+```
