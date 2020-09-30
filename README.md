@@ -12,6 +12,7 @@ This document contains knowledge of OpenShift Container Platform for daily use.
     - [Pods](#pods)
     - [Tuned](#tuned)
     - [Profile](#profile)
+- [Projects](#Projects)
 - [Console](#Console)
     - [Console](#console)
 - [Network](#Network)
@@ -68,6 +69,29 @@ Get and describe profile
 oc get profile -A
 
 oc describe profile -n <namespace> <profile_name>
+```
+
+## Projects
+
+Show which project you are using
+```
+oc project
+```
+
+Get projects `namespace`
+```
+oc projects
+
+oc get projects
+
+oc get ns
+```
+
+Describe projects `namespace`
+```
+oc describe project <project_name>
+
+oc describe ns <project_name>
 ```
 
 Watch
