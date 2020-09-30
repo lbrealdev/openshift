@@ -4,14 +4,14 @@ This document contains knowledge of OpenShift Container Platform for daily use.
 
 <!-- TOC -->
 
-- [Infrastructure]
+- [Infrastructure](#Infrastructure)
     - [Infrastructure](#infrastructure)
     - [DNS](#dns)
 - [Nodes](#Nodes)
     - [Nodes](#nodes)
     - [Pods](#pods)
-- [Storage](#Storage)
-    - [storage-account](#storage-account)
+- [Console](#Console)
+    - [Console](#console)
 
 ## Infrastructure
 
@@ -142,4 +142,14 @@ oc get oauth
 Describe oauth
 ```
 oc describe oauth/cluster
+```
+
+## Console
+
+#### console
+Get and describe console
+```
+oc get console
+
+oc describe console/cluster
 ```
