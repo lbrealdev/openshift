@@ -10,8 +10,12 @@ This document contains knowledge of OpenShift Container Platform for daily use.
 - [Nodes](#Nodes)
     - [Nodes](#nodes)
     - [Pods](#pods)
+    - [Tuned](#tuned)
+    - [Profile](#profile)
 - [Console](#Console)
     - [Console](#console)
+- [Network](#Network)
+- [ETCD](#ETCD)
 
 ## Infrastructure
 
@@ -47,6 +51,22 @@ oc get po
 oc get po -A
 
 oc get po -A -o wide
+```
+
+#### tuned
+Get and describe tuned
+```
+oc get tuned -A
+
+oc describe tuned -n <namespace> <tuned_name>
+```
+
+#### profile
+Get and describe profile
+```
+oc get profile -A
+
+oc describe profile -n <namespace> <profile_name>
 ```
 
 Watch
@@ -127,21 +147,11 @@ oc wait mcp/master --for condition=updated
 oc wait mcp/worket --for condition=updated
 ```
 
-Get clusterversion
+Get and describe clusterversion
 ```
 oc get clusterversion
-```
-Describe clusterversion
-```
+
 oc describe clusterversion/version
-```
-Get oauth
-```
-oc get oauth
-```
-Describe oauth
-```
-oc describe oauth/cluster
 ```
 
 ## Console
@@ -152,4 +162,108 @@ Get and describe console
 oc get console
 
 oc describe console/cluster
+```
+
+Get and describe APIServer
+```
+oc get apiserver
+
+oc describe apiserver/cluster
+```
+
+Get and describe Oauth
+```
+oc get oauth
+
+oc describe oauth/cluster
+```
+
+Get and describe authetication
+```
+oc get authentication
+
+oc describe authentication/cluster
+```
+
+Get and describe proxy
+```
+oc get proxy
+
+oc describe proxy/cluster
+```
+
+Get and describe FeatureGate
+```
+oc get featuregate
+
+oc describe featuregate/cluster
+```
+
+Get and describe image
+```
+oc get image
+
+oc describe image/sha256:xxxxxxx
+```
+
+Get and describe scheduler
+```
+oc get scheduler
+
+oc describe scheduler/cluster
+```
+
+Get and describe OperatorHub
+```
+oc get operatorhub
+
+oc describe operatorhub/cluster
+```
+
+Get and describe AlertManager
+```
+oc get alertmanager -A
+
+oc describe alertmanager -n openshift-monitoring main
+```
+
+Get and describe Prometheus
+```
+oc get prometheus -A
+
+oc describe prometheus -n openshift-monitoring k8s
+```
+
+Get and describe PrometheusRule
+```
+oc get prometheusrule -A
+
+oc describe prometheusrule -n <namespace> <prometheusrules_name>
+```
+
+Get and describe ServiceMonitor
+```
+oc get servicemonitor -A
+
+oc describe servicemonitor -n <namespace> <servicemonitor_name>
+```
+
+
+
+## Network
+
+Get and describe network
+```
+oc get network
+
+oc describe network/cluster
+```
+
+## ETCD
+
+Get and describe ETCD
+```
+oc get etcd
+
+oc describe etcd/cluster
 ```
