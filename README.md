@@ -15,7 +15,7 @@ This document contains knowledge of OpenShift Container Platform for daily use.
 
 ## Infrastructure
 
-### infrastructure
+#### infrastructure
 Get and describe infrastructure
 ```
 oc get infrastructures
@@ -23,7 +23,7 @@ oc get infrastructures
 oc describe infrastructures/cluster
 ```
 
-### dns
+#### dns
 Get and describe dns
 ```
 oc get dns
