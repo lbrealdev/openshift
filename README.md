@@ -5,17 +5,20 @@ This document contains knowledge of OpenShift Container Platform for daily use.
 <!-- TOC -->
 
 - [Nodes](#Nodes)
-    - [private-endpoint](#private-endpoint)
-    - [private-dns zone](#private-dns-zone)
-    - [private-dns record](#private-dns-record)
-    - [vnet](#vnet)
-    - [subnet](#subnet)
-    - [nic](#nic)
+    - [Nodes](#nodes)
+    - [Pods](#pods)
 - [Storage](#Storage)
     - [storage-account](#storage-account)
 
-### Nodes
+## Nodes
 
+#### nodes
+Get nodes
+```
+oc get no
+```
+
+#### pods
 Get pods
 ```
 oc get po
