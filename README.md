@@ -322,3 +322,13 @@ oc describe oauthclient/console
 ```
 
 
+Get objects:
+```
+oc get clusterrolebindings
+
+oc get rolebindings
+
+oc get clusterrole
+
+oc get role
+```
