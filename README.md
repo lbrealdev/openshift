@@ -4,7 +4,7 @@ This document contains knowledge of OpenShift Container Platform for daily use.
 
 <!-- TOC -->
 
-- [Nodes](#Network)
+- [Nodes](#Nodes)
     - [private-endpoint](#private-endpoint)
     - [private-dns zone](#private-dns-zone)
     - [private-dns record](#private-dns-record)
