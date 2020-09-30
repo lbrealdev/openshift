@@ -3,12 +3,32 @@
 This document contains knowledge of OpenShift Container Platform for daily use.
 
 <!-- TOC -->
-
+- [Infrastructure]
+    - [Infrastructure](#infrastructure)
+    - [DNS](#dns)
 - [Nodes](#Nodes)
     - [Nodes](#nodes)
     - [Pods](#pods)
 - [Storage](#Storage)
     - [storage-account](#storage-account)
+
+## Infrastructure
+
+### infrastructure
+Get and describe infrastructure
+```
+oc get infrastructures
+
+oc describe infrastructures/cluster
+```
+
+### dns
+Get and describe dns
+```
+oc get dns
+
+oc describe dns/cluster
+```
 
 ## Nodes
 
