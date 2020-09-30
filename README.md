@@ -94,6 +94,11 @@ oc describe project <project_name>
 oc describe ns <project_name>
 ```
 
+Change from the current project to a different project
+```
+oc project <project_name>
+```
+
 Watch
 ```
 watch 'oc get po -A'
