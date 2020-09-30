@@ -16,6 +16,7 @@ This document contains knowledge of OpenShift Container Platform for daily use.
     - [Console](#console)
 - [Network](#Network)
 - [ETCD](#ETCD)
+- [Oauth](#Oauth)
 
 ## Infrastructure
 
@@ -171,20 +172,6 @@ oc get apiserver
 oc describe apiserver/cluster
 ```
 
-Get and describe Oauth
-```
-oc get oauth
-
-oc describe oauth/cluster
-```
-
-Get and describe authetication
-```
-oc get authentication
-
-oc describe authentication/cluster
-```
-
 Get and describe proxy
 ```
 oc get proxy
@@ -259,6 +246,20 @@ oc get network
 oc describe network/cluster
 ```
 
+Get and describe ClusterNetwork
+```
+oc get clusternetwork
+
+oc describe clusternetwork/default
+```
+
+Get and describe HostSubnet
+```
+oc get hostsubnet
+
+oc describe hostsubnet <hostsubnet_name>
+```
+
 ## ETCD
 
 Get and describe ETCD
@@ -267,3 +268,28 @@ oc get etcd
 
 oc describe etcd/cluster
 ```
+
+## Oauth
+
+Get and describe Oauth
+```
+oc get oauth
+
+oc describe oauth/cluster
+```
+
+Get and describe authetication
+```
+oc get authentication
+
+oc describe authentication/cluster
+```
+
+Get and describe OauthClient
+```
+oc get oauthclient
+
+oc describe oauthclient/console
+```
+
+
