@@ -3,7 +3,7 @@
 This document contains knowledge of OpenShift Container Platform for daily use.
 
 <!-- TOC -->
-
+- [API](#API)
 - [Infrastructure](#Infrastructure)
     - [Infrastructure](#infrastructure)
     - [DNS](#dns)
@@ -15,9 +15,16 @@ This document contains knowledge of OpenShift Container Platform for daily use.
 - [Projects](#Projects)
 - [Console](#Console)
     - [Console](#console)
+    - [Console Download](#console-cli-download)
 - [Network](#Network)
 - [ETCD](#ETCD)
 - [Oauth](#Oauth)
+
+## API
+Get all resources `objects`
+```
+oc api-resources
+```
 
 ## Infrastructure
 
@@ -192,6 +199,13 @@ Get and describe console
 oc get console
 
 oc describe console/cluster
+```
+#### console-cli-download
+Get and describe console cli downdloads
+```
+oc get consoleclidownloads
+
+oc describe consoleclidownloads/oc-cli-downloads
 ```
 
 Get and describe APIServer
