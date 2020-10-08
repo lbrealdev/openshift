@@ -19,6 +19,7 @@ This document contains knowledge of OpenShift Container Platform for daily use.
 - [Network](#Network)
 - [ETCD](#ETCD)
 - [Oauth](#Oauth)
+- [Debug](#debug)
 
 ## API
 Get all resources `objects`
@@ -345,4 +346,16 @@ oc get rolebindings
 oc get clusterrole
 
 oc get role
+```
+
+## Debug
+
+Connect to the node
+```
+oc debug node/<node_name>
+```
+
+Change your root directory to the host:
+```
+chroot /host
 ```
