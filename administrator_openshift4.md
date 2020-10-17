@@ -3,6 +3,6 @@
 
 Create new project `namespace`:
 ```
-oc new-project sigma \
-  --display-name="Sigma"
+oc new-project myproject \
+  --display-name="My Project"
 ```
