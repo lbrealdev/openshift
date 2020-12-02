@@ -192,6 +192,11 @@ oc get clusterversion
 oc describe clusterversion/version
 ```
 
+Get ComponentStatus:
+```
+oc get cs
+```
+
 ## Console
 
 #### console
