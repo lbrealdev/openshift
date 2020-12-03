@@ -300,6 +300,8 @@ Get and describe ClusterNetwork
 oc get clusternetwork
 
 oc describe clusternetwork/default
+
+oc get clusternetwork default -o yaml
 ```
 
 Get and describe HostSubnet
@@ -307,6 +309,21 @@ Get and describe HostSubnet
 oc get hostsubnet
 
 oc describe hostsubnet <hostsubnet_name>
+```
+
+Get egressNetworkPolicies:
+```
+oc get egressnetworkpolicies
+```
+
+Get networkPolicies:
+```
+oc get netpol
+```
+
+Get ingress:
+```
+oc get ing
 ```
 
 ## ETCD
