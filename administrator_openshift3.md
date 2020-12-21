@@ -27,3 +27,12 @@ Display Resource (CPU/Memory/Storage) usage of pods:
 ```
 oc adm top po
 ```
+
+Use `oc adm drain` to gracefully terminate all pods on the node while marking the node as unschedulable:
+```
+oc adm drain $nodename --delete-local-data --ignore-daemonsets
+```
+Make the node schedulable again, use `oc adm uncordon`:
+```
+oc adm uncordon $nodename
+```
