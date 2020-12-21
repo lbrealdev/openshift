@@ -11,7 +11,7 @@ Get pods state different `Running`:
 oc get po --all-namespaces --no-headers --field-selector 'status.phase!=Running'
 ```
 
-## oc adm
+## Working with nodes
 
 List all pods on the node:
 ```
@@ -27,7 +27,7 @@ Display Resource (CPU/Memory/Storage) usage of pods:
 ```
 oc adm top po
 ```
-
+---------------------------------------------------------
 Use `oc adm drain` to gracefully terminate all pods on the node while marking the node as unschedulable:
 ```
 oc adm drain $nodename --delete-local-data --ignore-daemonsets
