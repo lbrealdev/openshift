@@ -1,22 +1,13 @@
-# OpenShift Atomic Service
+# atomic openshift
 
 ### Opeshift 3
 
+Get status atomic-openshift service:
 ```
 systemctl status atomic-openshift-node.service -l
 ```
 
-Query the journal with message explanations in immediately jump to the end in the pager:
-```
-journalctl -xe
-```
-
-Follow the journal messages:
-```
-journalctl -xf
-```
-
-Show logs from the specified unit:
+Show logs from Journal of atomic-openshift:
 ```
 journalctl -u atomic-openshift-node
 ```
