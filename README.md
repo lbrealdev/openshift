@@ -178,11 +178,11 @@ oc get ds
 
 Wait for one condition on one or many resources
 
-MachineConfigPool
+Wait for a specific condition on one or many resources:
 ```
-oc wait mcp/master --for condition=updated
+oc wait --for=condition=updated mcp/master
 
-oc wait mcp/worker --for condition=updated
+oc wait --for=condition=updated mcp/worker
 ```
 
 Get and describe clusterversion
