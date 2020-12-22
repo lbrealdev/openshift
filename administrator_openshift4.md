@@ -16,6 +16,18 @@ Show kubelet logs from all masters:
 ```
 oc adm node-logs --role master -u kubelet
 ```
+Show lastest 1000 lines from all masters:
+```
+oc adm node-logs --role master --tail=1000 -u kubelet
+```
+Show lastest 1000 lines from all masters with grep search string `not found`:
+```
+oc adm node-logs --tail=100 --role master --grep='not found' -u kubelet
+```
+Show lastest 1000 lines from all nodes with role worker thet be label `kubernetes.io/hostname=$NODE`:
+```
+oc adm node-logs --tail=100 --role worker -l hostname='$NODE' -u kubelet
+```
 
 ### Certificates
 
