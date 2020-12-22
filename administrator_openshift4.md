@@ -46,7 +46,7 @@ oc get csr -o name | xargs oc adm certificate approve
 
 ### Manage objects
 
-Get and convert base64 value from `MachineConfig`:
+Get data base64 from `MachineConfig` and decode:
 ```
 export MC=<machine_config_name>
 oc get mc $MC -o json | jq -r '. | {Base64:.spec.config.storage.files[0].contents.source}' | awk -F '[:]' '{print $3}' | cut -d '"' -f 1 | cut -d , -f 2 | xargs -L1 bash -c 'echo $0 | base64 -d'
