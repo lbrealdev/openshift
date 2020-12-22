@@ -50,5 +50,5 @@ Get data base64 from `MachineConfig` and decode:
 ```
 export MC=`oc get mc $NAME -o json | jq -r '. | .metadata.name'`
 
-oc get mc $MC -o json | jq -r '. | {Base64:.spec.config.storage.files[0].contents.source}' | awk -F '[:]' '{print $3}' | cut -d '"' -f 1 | cut -d , -f 2 | xargs -L1 bash -c 'echo $0 | base64 -d'
+oc get mc $MC -o json | jq -r '. | .spec.config.storage.files[0].contents.source' | cut -d , -f 2 | base64 -d
 ```
