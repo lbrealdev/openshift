@@ -182,7 +182,7 @@ MachineConfigPool
 ```
 oc wait mcp/master --for condition=updated
 
-oc wait mcp/worket --for condition=updated
+oc wait mcp/worker --for condition=updated
 ```
 
 Get and describe clusterversion
