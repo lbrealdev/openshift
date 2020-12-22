@@ -48,7 +48,7 @@ oc get csr -o name | xargs oc adm certificate approve
 
 Get data base64 from `MachineConfig` and decode:
 ```
-export MC=<machine_config_name>
+export MC=`oc get mc $NAME -o name | cut -d "/" -f 2`
 
 oc get mc $MC -o json | jq -r '. | {Base64:.spec.config.storage.files[0].contents.source}' | awk -F '[:]' '{print $3}' | cut -d '"' -f 1 | cut -d , -f 2 | xargs -L1 bash -c 'echo $0 | base64 -d'
 ```
