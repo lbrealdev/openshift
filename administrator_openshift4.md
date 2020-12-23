@@ -46,7 +46,7 @@ oc get csr -o name | xargs oc adm certificate approve
 
 ### Manage objects
 
-Get data base64 from `MachineConfig` and decode:
+Decode base64 data from `MachineConfig`:
 ```
 export MC=`oc get mc $NAME -o json | jq -r '. | .metadata.name'`
 
