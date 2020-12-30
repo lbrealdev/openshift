@@ -25,3 +25,17 @@ Show logs from kubelet:
 ```
 journalctl -u kubelet.service
 ```
+
+### services
+
+NTP client server
+
+Get status chronyd service:
+```
+systemctl status chronyd.service
+```
+
+Check if NTP is synchronised:
+```
+chronyc tracking
+```
