@@ -1,14 +1,19 @@
 # openshift
 
 
-Get pods state equal `Running`:
+Get pods status equal `Running`:
 ```
 oc get po --all-namespaces --no-headers --field-selector 'status.phase=Running'
 ```
 
-Get pods state different `Running`:
+Get pods status different `Running`:
 ```
 oc get po --all-namespaces --no-headers --field-selector 'status.phase!=Running'
+```
+
+Delete pods in a specific namespace with status different `Running`:
+```
+oc get po --no-headers --field-selector 'status.phase!=Running' | awk '{print $1}' | xargs oc delete po
 ```
 
 ## Working with nodes
