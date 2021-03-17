@@ -4,6 +4,7 @@ This document contains knowledge of OpenShift Container Platform for daily use.
 
 <!-- TOC -->
 - [API](#API)
+- [Namespaces](#Namespaces)
 - [Infrastructure](#Infrastructure)
     - [Infrastructure](#infrastructure)
     - [DNS](#dns)
@@ -22,10 +23,18 @@ This document contains knowledge of OpenShift Container Platform for daily use.
 - [Debug](#debug)
 
 ## API
-Get all resources `objects`
+Get the supported API resources on the server:
 ```
 oc api-resources
 ```
+Get the supported API version on the server:
+```
+oc api-versions
+```
+
+## Namespaces
+
+
 
 ## Infrastructure
 
