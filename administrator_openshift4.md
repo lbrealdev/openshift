@@ -52,3 +52,9 @@ export MC=`oc get mc $NAME -o json | jq -r '. | .metadata.name'`
 
 oc get mc $MC -o json | jq -r '. | .spec.config.storage.files[0].contents.source' | cut -d , -f 2 | base64 -d
 ```
+
+### Get logs with since, tail, prefix and timestamps for all containers in a pod
+```
+oc logs --since-time="2021-05-14T08:00:00Z" $pod --all-containers --prefix --timestamps
+```
+
