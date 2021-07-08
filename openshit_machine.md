@@ -2,5 +2,5 @@
 
 Pause updates in MachineConfigPool:
 ```
-oc patch mcp --type merge -p '{"spec":{"paused":"true"}}'
+oc patch mcp worker --type merge -p '{"spec":{ "paused": 'false' }}'
 ```
