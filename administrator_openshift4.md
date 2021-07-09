@@ -46,11 +46,9 @@ oc get csr -o name | xargs oc adm certificate approve
 
 ### Manage objects
 
-Decode base64 data from `MachineConfig`:
+Get MachineConfig and decode base64 data:
 ```
-export MC=`oc get mc $NAME -o json | jq -r '. | .metadata.name'`
-
-oc get mc $MC -o json | jq -r '. | .spec.config.storage.files[0].contents.source' | cut -d , -f 2 | base64 -d
+oc get mc $machineconfig_name -o jsonpath='{.spec.config.storage.files[].contents.source}' | cut -d ',' -f 2 | base64 -d
 ```
 
 ### Get logs with since, tail, prefix and timestamps for all containers in a pod
