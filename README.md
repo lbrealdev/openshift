@@ -9,10 +9,7 @@ This document contains knowledge of OpenShift Container Platform for daily use.
     - [Infrastructure](#infrastructure)
     - [DNS](#dns)
 - [Nodes](#Nodes)
-    - [Nodes](#nodes)
-    - [Pods](#pods)
-    - [Tuned](#tuned)
-    - [Profile](#profile)
+- [Pods](#Pods)
 - [Console](#Console)
     - [Console](#console)
     - [Console Download](#console-cli-download)
@@ -73,16 +70,14 @@ oc get ev -n $project_name
 
 ## Infrastructure
 
-#### infrastructure
-Get and describe infrastructure
+Get and describe infrastructure resource:
 ```
 oc get infrastructures
 
 oc describe infrastructures/cluster
 ```
 
-#### dns
-Get and describe dns
+Get and describe dns resource:
 ```
 oc get dns
 
@@ -91,27 +86,49 @@ oc describe dns/cluster
 
 ## Nodes
 
-#### nodes
-Get nodes
+Get all nodes from cluster:
 ```
 oc get no
+
+oc get no -o wide
 ```
 
-#### pods
-Get pods
+Describe a node:
 ```
+oc describe no $node_name
+```
+
+Get nodes with watch:
+```
+watch 'oc get no'
+```
+
+## Pods
+
+Get pods from cluster:
+```
+# Current project
 oc get po
 
+# All projects
 oc get po -A
 
+# All projects with output
 oc get po -A -o wide
 ```
 
-Watch
+Describe a pod:
+```
+# Current project
+oc describe po $pod_name
+
+# Other project
+oc describe po -n $project_name $pod_name
+```
+
+Get pods with watch 
 ```
 watch 'oc get po -A'
-
-watch 'oc get no'
 ```
 
 #### tuned
