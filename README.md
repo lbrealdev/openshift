@@ -17,7 +17,7 @@ This document contains knowledge of OpenShift Container Platform for daily use.
 - [Network](#Network)
 - [ETCD](#ETCD)
 - [Oauth](#Oauth)
-- [Debug](#debug)
+- [Troubleshooting](#Troubleshooting)
 
 ## API
 Get the supported API resources on the server:
@@ -402,11 +402,11 @@ oc get clusterrole
 oc get role
 ```
 
-## Debug
+## Troubleshooting
 
-Connect to the node
+Connect to a node using debug mode
 ```
-oc debug node/<node_name>
+oc debug node/$node_name
 ```
 
 Change your root directory to the host:
