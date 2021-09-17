@@ -1,4 +1,4 @@
-# openshift 4.x
+# openshift
 
 This document contains knowledge of OpenShift Container Platform for daily use.
 
@@ -8,6 +8,7 @@ This document contains knowledge of OpenShift Container Platform for daily use.
 - [Infrastructure](#Infrastructure)
     - [Infrastructure](#infrastructure)
     - [DNS](#dns)
+- [Machines](#Machines) 
 - [Nodes](#Nodes)
 - [Pods](#Pods)
 - [Console](#Console)
@@ -82,6 +83,28 @@ Get and describe dns resource:
 oc get dns
 
 oc describe dns/cluster
+```
+
+## Machines
+
+Get all machines from cluster:
+```
+oc get machines -n openshift-machine-api
+```
+
+Get MachineSet:
+```
+oc get machineset -n openshift-machine-api
+```
+
+Get MachineConfig:
+```
+oc get mc
+```
+
+Get MachineConfigPool:
+```
+oc get mcp
 ```
 
 ## Nodes
@@ -168,26 +191,6 @@ Get pvc
 oc get pvc
 
 oc get pvc -A
-```
-
-Get Machines
-```
-oc get machines -n openshift-machine-api
-```
-
-Get MachineSet
-```
-oc get machineset -n openshift-machine-api
-```
-
-Get MachineConfig
-```
-oc get mc
-```
-
-Get MachineConfigPool
-```
-oc get mcp
 ```
 
 Get ClusterOperator
