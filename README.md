@@ -13,7 +13,6 @@ This document contains knowledge of OpenShift Container Platform for daily use.
     - [Pods](#pods)
     - [Tuned](#tuned)
     - [Profile](#profile)
-- [Projects](#Projects)
 - [Console](#Console)
     - [Console](#console)
     - [Console Download](#console-cli-download)
@@ -34,7 +33,43 @@ oc api-versions
 
 ## Namespaces
 
+Show current project `namespace`:
+```
+oc project
+```
 
+Get all projects in the cluster:
+```
+oc projects
+
+oc get projects
+
+oc get ns
+```
+
+Describe a determinate project:
+```
+oc describe project $project_name
+
+oc describe ns $project_name
+```
+
+Change from the current project to a other project:
+```
+oc project $project_name
+```
+
+Get events from project:
+```
+# Current project
+oc get ev
+
+# All projects
+oc get ev -A
+
+# Specific project
+oc get ev -n $project_name
+```
 
 ## Infrastructure
 
@@ -72,6 +107,13 @@ oc get po -A
 oc get po -A -o wide
 ```
 
+Watch
+```
+watch 'oc get po -A'
+
+watch 'oc get no'
+```
+
 #### tuned
 Get and describe tuned
 ```
@@ -88,45 +130,6 @@ oc get profile -A
 oc describe profile -n <namespace> <profile_name>
 ```
 
-## Projects
-
-Show which project you are using
-```
-oc project
-```
-
-Get projects `namespace`
-```
-oc projects
-
-oc get projects
-
-oc get ns
-```
-
-Describe projects `namespace`
-```
-oc describe project <project_name>
-
-oc describe ns <project_name>
-```
-
-Change from the current project to a different project
-```
-oc project <project_name>
-```
-
-Watch
-```
-watch 'oc get po -A'
-
-watch 'oc get no'
-```
-
-Get events
-```
-oc get events -A
-```
 
 Get serviceaccounts
 ```
