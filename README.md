@@ -126,6 +126,21 @@ Get nodes with watch:
 watch 'oc get no'
 ```
 
+Add label to node:
+```
+oc label no $nome_name <$key_1>=<$value_1> <$key_2>=<$value_2>
+```
+
+Remove label to node:
+```
+oc label no $nome_name <$key_1>-
+```
+
+Get labels from nodes:
+```
+oc get no --show-labels
+```
+
 ## Pods
 
 Get pods from cluster:
