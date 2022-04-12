@@ -4,11 +4,11 @@
 
 1 - Download "openshift-client-linux" via curl:
 ```
-curl -sO https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-client-linux-4.8.13.tar.gz
+curl -sO https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-client-linux-4.10.8.tar.gz
 ```
 2 - Extract TAR file:
 ```
-tar -xf openshift-client-linux-4.8.13.tar.gz
+tar -xf openshift-client-linux-4.10.8.tar.gz
 ```
 3 - Move oc client extract from TAR file to this path:
 ```
